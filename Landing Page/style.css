@@ -1,0 +1,106 @@
+:root{
+  --bg:#0b1020; --bg2:#0e1630; --ink:#e5e7eb; --muted:#cbd5e1; --accent:#6366f1; --ring:#334155;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+a{color:inherit;text-decoration:none}
+
+/* Layout helpers */
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.row{display:flex;gap:10px;align-items:center}
+.between{justify-content:space-between}
+.wrap{flex-wrap:wrap}
+.center{text-align:center}
+.mt0{margin-top:0}
+.mt12{margin-top:12px}
+.mt-14{margin-top:14px}
+.mb-14{margin-bottom:14px}
+.mb-18{margin-bottom:18px}
+.section{padding:32px 0}
+.lead{font-size:1.1rem}
+
+.hero-media.padded{
+  height: clamp(260px, 80vw, 420px);
+  padding: 10px;            
+  border-radius: 22px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.hero-media.padded .mockup-square{
+  width: 80%;
+  height: 100%;
+  max-width: 640px;         
+  aspect-ratio: 1 / 1;      
+  object-fit: contain;      
+  border-radius: 12px;      
+  display: block;
+}
+
+/* Buttons & badges */
+.btn{display:inline-flex;gap:.5rem;align-items:center;border:1px solid transparent;background:var(--accent);color:white;padding:.9rem 1.1rem;border-radius:14px;font-weight:700;box-shadow:0 10px 20px rgba(99,102,241,.25);}
+.btn.secondary{background:transparent;border-color:#475569}
+.btn.block{width:100%}
+.badge{display:inline-flex;gap:.4rem;align-items:center;border:1px solid #475569;color:#c7d2fe;background:rgba(99,102,241,.12);border-radius:999px;padding:.25rem .6rem;font-size:.8rem}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.6);backdrop-filter:blur(8px);border-bottom:1px solid #1f2937}
+header .bar{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+nav a{opacity:.85;margin:0 10px}
+nav a:hover{opacity:1}
+
+/* Hero */
+.hero{padding:72px 0 40px}
+.grid{display:grid;gap:28px}
+.grid-2{grid-template-columns:1fr}
+.card{background:rgba(15,23,42,.6);border:1px solid var(--ring);border-radius:22px;padding:20px}
+.h1{font-size:clamp(32px,4vw,48px);font-weight:900;line-height:1.1;margin:.5rem 0 1rem}
+.h2{font-size:2rem;margin:.2rem 0 1rem}
+.h3{font-size:1.25rem;margin:.2rem 0 .6rem}
+.muted{color:var(--muted)}
+.accent{color:#a5b4fc}
+.glow{background:
+  radial-gradient(1200px 400px at 20% -20%, rgba(99,102,241,.35), transparent),
+  radial-gradient(1000px 300px at 90% 0%, rgba(56,189,248,.25), transparent)
+}
+.hero-media{height:360px;display:grid;place-items:center}
+.center{text-align:center}
+.emojixl{font-size:64px;line-height:1}
+.kpis{gap:18px;margin-top:12px}
+
+/* Steps */
+.steps{display:grid;gap:18px}
+.step{display:flex;gap:14px}
+.ico{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3)}
+.align-center{align-items:center}
+
+/* Lists */
+.ul{list-style:none;padding:0;margin:0}
+.li{display:flex;gap:10px;align-items:center;margin:.5rem 0}
+
+/* Plans */
+.plans{display:grid;gap:18px}
+.plan{border-radius:22px;padding:18px;border:1px solid var(--ring);background:rgba(15,23,42,.6)}
+.plan.highlight{background:linear-gradient(180deg, rgba(99,102,241,.18), rgba(15,23,42,.6))}
+.price{font-size:1.6rem;font-weight:800;margin:.3rem 0 1rem}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.tile{aspect-ratio:16/9;border-radius:18px;background:linear-gradient(135deg,#1f2937,#0b1020);border:1px solid #1f2937;display:grid;place-items:center;color:#94a3b8;font-weight:600}
+
+/* Contact */
+.contact{display:grid;gap:20px}
+.contact-lines{margin:10px 0 0;display:grid;gap:8px}
+
+/* Footer */
+footer{border-top:1px solid #1f2937;padding:26px 0;color:#94a3b8}
+.dotsep{opacity:.6}
+
+/* Responsive */
+@media (min-width:900px){
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .plans{grid-template-columns:repeat(3,1fr)}
+  .contact{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+}
+
